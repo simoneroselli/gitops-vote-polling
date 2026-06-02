@@ -1,20 +1,21 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis
+  name: vote-frontend
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis
+      app: vote-frontend
   template:
     metadata:
       labels:
-        app: redis
+        app: vote-frontend
     spec:
       containers:
-      - name: redis
-        image: redis:alpine
+      - name: vote
+        image: dockersamples/examplevotingapp_vote:before
         ports:
-        - containerPort: 6379
+        - containerPort: 80
