@@ -1,4 +1,15 @@
 # GitOps Vote Polling
+
+- [GitOps Vote Polling](#gitops-vote-polling)
+  - [🗳️ Distributed Microservices Architecture Playground](#️-distributed-microservices-architecture-playground)
+  - [🚀 Infrastructure \& GitOps Stack](#-infrastructure--gitops-stack)
+  - [🧩 Application Components](#-application-components)
+    - [1. `vote-frontend` (Python Web App)](#1-vote-frontend-python-web-app)
+    - [2. `redis` (In-Memory Buffer)](#2-redis-in-memory-buffer)
+    - [3. `vote-worker` (.NET Background Processor)](#3-vote-worker-net-background-processor)
+    - [4. `postgres` / `result-frontend` (Data \& Presentation)](#4-postgres--result-frontend-data--presentation)
+  - [📈 Elasticity \& Autoscaling (HPA)](#-elasticity--autoscaling-hpa)
+
 ## 🗳️ Distributed Microservices Architecture Playground
 
 This repository serves as an engineering playground for testing **horizontal autoscaling (HPA)**, **traffic ingestion bottlenecks**, and **asynchronous data pipelines** in a containerized environment. 
