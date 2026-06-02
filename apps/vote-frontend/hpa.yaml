@@ -10,7 +10,7 @@ spec:
     kind: Deployment
     name: vote-frontend    # Target our frontend
   minReplicas: 1
-  maxReplicas: 5           # Allow it to stretch up to 5 instances
+  maxReplicas: 10          # Allow it to stretch up to 5 instances
   metrics:
   - type: Resource
     resource:
