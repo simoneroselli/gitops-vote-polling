@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: load-test
-        image: williamyeh/hey:latest
+        image: rakyll/hey:latest
         # This loops the load tester, firing 50 concurrent connections continuously
         command: ["/bin/sh", "-c"]
         args:
