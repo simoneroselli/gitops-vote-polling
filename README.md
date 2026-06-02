@@ -1,4 +1,5 @@
-# 🗳️ Distributed Microservices Architecture Playground
+# GitOps Vote Polling
+## 🗳️ Distributed Microservices Architecture Playground
 
 This repository serves as an engineering playground for testing **horizontal autoscaling (HPA)**, **traffic ingestion bottlenecks**, and **asynchronous data pipelines** in a containerized environment. 
 
