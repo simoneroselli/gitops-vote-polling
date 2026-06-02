@@ -16,12 +16,17 @@ spec:
     spec:
       containers:
       - name: load-test
-        image: rakyll/hey:latest
-        # This loops the load tester, firing 50 concurrent connections continuously
+        image: alpine:latest
         command: ["/bin/sh", "-c"]
+        # Installs curl, then runs a tight loop executing simultaneous rapid async background calls
         args:
           - |
+            apk add --no-cache curl;
+            echo "Starting stress engine against vote-frontend...";
             while true; do
-              hey -z 30s -c 50 http://vote-service:5000/;
-              sleep 5;
+              # Fire 20 background workers simultaneously every second
+              for i in $(seq 1 20); do
+                curl -s -X POST -d "vote=a" http://vote-service:5000/ > /dev/null &
+              done
+              sleep 0.5;
             done
