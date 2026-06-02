@@ -53,7 +53,7 @@ To protect the platform against traffic surges (simulated via an Alpine-based lo
 ```bash
 apps/
 ├── vote-frontend/
-│   ├── hpa-frontend.yaml  # Configured to scale up to 10 replicas
+│   ├── hpa.yaml  # Configured to scale up to 10 replicas
 └── vote-worker/
-├── hpa-worker.yaml    # Configured to scale up to 5 replicas
+├── hpa.yaml    # Configured to scale up to 5 replicas
 ```
