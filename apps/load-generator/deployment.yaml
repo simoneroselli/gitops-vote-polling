@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: load-generator
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: load-generator
+  template:
+    metadata:
+      labels:
+        app: load-generator
+    spec:
+      containers:
+      - name: load-test
+        image: williamyeh/hey:latest
+        # This loops the load tester, firing 50 concurrent connections continuously
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            while true; do
+              hey -z 30s -c 50 http://vote-service:5000/;
+              sleep 5;
+            done
