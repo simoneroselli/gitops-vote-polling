@@ -6,4 +6,4 @@ resources:
 - result-frontend
 - postgres
 - redis
-- load-generator
+# - load-generator
