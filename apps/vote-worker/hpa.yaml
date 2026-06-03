@@ -10,7 +10,7 @@ spec:
     kind: Deployment
     name: vote-worker     # Target our background engine
   minReplicas: 1
-  maxReplicas: 5          # Scale up to 5 instances to clear the queue simultaneously
+  maxReplicas: 2         # Scale up to 5 instances to clear the queue simultaneously
   metrics:
   - type: Resource
     resource:
