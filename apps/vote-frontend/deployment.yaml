@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vote
-        image: dockersamples/examplevotingapp_vote:before
+        image: dockersamples/examplevotingapp_vote:before # playground app
         ports:
         - containerPort: 80
           name: vote
