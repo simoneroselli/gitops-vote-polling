@@ -1,6 +1,6 @@
-# GitOps Vote Polling
+# Vote Polling App
 
-- [GitOps Vote Polling](#gitops-vote-polling)
+- [Vote Polling App](#vote-polling-app)
   - [🗳️ Distributed Microservices Architecture Playground](#️-distributed-microservices-architecture-playground)
   - [🚀 Infrastructure \& GitOps Stack](#-infrastructure--gitops-stack)
   - [🧩 Application Components](#-application-components)
