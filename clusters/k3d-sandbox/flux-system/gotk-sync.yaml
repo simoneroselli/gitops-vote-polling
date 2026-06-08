@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/simoneroselli/sandbox-gitops-manifests
+  url: ssh://git@github.com/simoneroselli/platform-engineer-playground
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
