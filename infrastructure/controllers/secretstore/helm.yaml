@@ -6,7 +6,6 @@ metadata:
 spec:
   interval: 1h
   values:
-    installCRDs: true
     env:
       AWS_SECRETSMANAGER_ENDPOINT: "http://host.k3d.internal:4566"
   chart:
@@ -17,6 +16,10 @@ spec:
         kind: HelmRepository
         name: external-secrets
         namespace: flux-system
+  install:
+    crds: CreateReplace   # <-- This forces Flux to install them
+  upgrade:
+    crds: CreateReplace
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
