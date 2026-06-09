@@ -4,3 +4,5 @@ resources:
   - helm.yaml
   - credentials.yaml
   - namespace.yaml
+  - secretstore.yaml
+  - external-secret.yaml
