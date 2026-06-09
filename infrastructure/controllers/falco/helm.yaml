@@ -22,7 +22,7 @@ spec:
   # Imperative helm command values baked directly into GitOps declarations
   values:
     driver:
-      kind: modern-ebpf   # Enforces the modern eBPF driver required for k3d
+      kind: modern_ebpf   # Enforces the modern eBPF driver required for k3d
 
     falco:
       json_output: true   # Formats logs into structured JSON payloads
