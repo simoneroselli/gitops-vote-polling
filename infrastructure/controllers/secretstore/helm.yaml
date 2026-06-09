@@ -2,9 +2,13 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: external-secrets
-  namespace: external-secrets
+  namespace: flux-system
 spec:
   interval: 1h
+  values:
+    installCRDs: true
+    env:
+      AWS_SECRETSMANAGER_ENDPOINT: "http://host.k3d.internal:4566"
   chart:
     spec:
       chart: external-secrets
@@ -18,7 +22,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: external-secrets
-  namespace: external-secrets
+  namespace: flux-system
 spec:
   interval: 1h
   url: https://charts.external-secrets.io
