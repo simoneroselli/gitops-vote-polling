@@ -6,8 +6,15 @@ metadata:
 spec:
   interval: 1h
   values:
-    env:
-      AWS_SECRETSMANAGER_ENDPOINT: "http://host.k3d.internal:4566"
+    extraEnv:
+      - name: AWS_ENDPOINT_URL
+        value: "http://host.k3d.internal:4566"
+      - name: AWS_ENDPOINT_URL_SECRETSMANAGER
+        value: "http://host.k3d.internal:4566"
+      - name: AWS_SECRETSMANAGER_ENDPOINT
+        value: "http://host.k3d.internal:4566"
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: "regional"
   chart:
     spec:
       chart: external-secrets
