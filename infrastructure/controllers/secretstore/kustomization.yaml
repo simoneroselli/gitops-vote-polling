@@ -5,3 +5,4 @@ resources:
   - credentials.yaml
   - namespace.yaml
   - secretstore.yaml
+  - external-secret.yaml
